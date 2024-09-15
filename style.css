@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=SUSE&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "SUSE", sans-serif;
+    background-color: #0F0F1F;
+    color: #FFFFFF;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content_outer {
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.nav {
+    display: flex;
+    background-color: #14143E;
+    flex-direction: row;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    align-items: center;
+}
+
+.logo_1 {
+    flex-basis: 15%;
+    text-align: center;
+
+}
+
+.logo_2 {
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.menu {
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 10vh;
+}
+
+.menu div {
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+.menu div:hover {
+    background-color: #555555;
+    color: #FFAE00;
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#home-section {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    min-height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#home-section::before {
+    content: "HOME";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vh;
+    color: #51217C47;
+    z-index: -50;
+    font-family: "Ribeye Marrow", system-ui;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+#home-section .content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#home-section .about {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+#home-section .about .background {
+    position: absolute;
+    top: 80px;
+    left: 12.5%;
+    right: 0;
+    bottom: 80px;
+    width: 15%;
+    background-image: linear-gradient(to right, #14143E, #0F0F1F);
+    z-index: -1;
+}
+
+#home-section .about .content {
+    position: relative;
+    width: 60%;
+    left: 17.5%;
+    top: 15vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 15px;
+}
+
+#home-section .name span {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeIn 1s forwards ease-in-out;
+    letter-spacing: 5px;
+    font-size: 40px;
+    font-family: "Caveat", cursive;
+    color: #A847FF;
+    font-weight: bold;
+}
+
+#home-section .about .content h1 {
+    font-family: "Ribeye Marrow", system-ui;
+    font-weight: lighter;
+    color: #A847FF;
+    font-size: 35px;
+}
+
+#home-section .about .content h2 {
+    font-weight: lighter;
+}
+
+#home-section .about .content a {
+    font-family: "Dancing Script", cursive;
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home-section .image {
+    min-width: 60vh;
+    min-height: 50vh;
+}
+
+#about-section .image {
+    min-width: 50%;
+    min-height: 50vh;
+}
+
+#about-section {
+    min-height: 50vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#about-section::before {
+    content: "ABOUT";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vh;
+    color: #51217C47;
+    z-index: -50;
+    font-family: "Ribeye Marrow", system-ui;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+
+#about-section .content{
+    display: flex;
+    flex-direction: row;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    z-index: 1;
+}
+
+#about-section .content .about {
+    padding: 5vh 10vh;
+}
+
+.footer {
+    background-color: #14143E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact, .feedback {
+    flex-basis: 45%;
+}
+
+.contact h3, .feedback h3 {
+    margin-bottom: 15px;
+    color: #FFAE00;
+    font-family: 'Ribeye Marrow', cursive;
+}
+
+.contact p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback form .inputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.feedback form input[type="text"],
+.feedback form input[type="email"],
+.feedback form textarea {
+    padding: 12px;
+    border: 2px solid #A847FF;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #1E1E3F;
+    color: #FFFFFF;
+    transition: border-color 0.3s ease;
+    font-family: 'SUSE', sans-serif;
+}
+
+.feedback form input[type="text"]::placeholder,
+.feedback form input[type="email"]::placeholder,
+.feedback form textarea::placeholder {
+    color: #888888;
+}
+
+.feedback form input[type="text"]:focus,
+.feedback form input[type="email"]:focus,
+.feedback form textarea:focus {
+    border-color: #FFAE00;
+    outline: none;
+}
+
+.feedback form textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+.feedback form button {
+    padding: 12px;
+    background-color: #FFAE00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback form button:hover {
+    background-color: #D18C00;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#expertise-section {
+    position: relative;
+    overflow: hidden;
+    padding: 5vh 2vh;
+    text-align: center;
+}
+
+#expertise-section::before {
+    content: "EXPERTISE";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vh;
+    color: #51217C47;
+    z-index: -50;
+    font-family: "Ribeye Marrow", system-ui;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+#expertise-section .content {
+    padding: 5vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+#expertise-section .content .service {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1E1E3F88;
+    padding: 30px;
+    border-radius: 10px;
+    border: #40007A 2px solid;
+    transition: border 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+#expertise-section .content .service:hover {
+    border: #FFAE00 2px solid;
+    color: #FFAE00;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#expertise-section p {
+    margin-top: 20px;
+    font-size: 1.5vh;
+}
+
+#projects-section {
+    position: relative;
+    overflow: hidden;
+}
+
+#projects-section::before {
+    content: "PROJECTS";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vh;
+    color: #51217C47;
+    z-index: -50;
+    font-family: "Ribeye Marrow", system-ui;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+#projects-section {
+    padding: 2.5vh 10vh;
+}
+
+.scroll-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scroll-container button {
+    background-color: rgba(41, 128, 185, 0);
+    border: #40007A 2px solid;
+    border-radius: 10px;
+    max-height: 10vh;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#left-button {
+    left: 10px;
+}
+
+#right-button {
+    right: 10px;
+}
+
+.scroll-container button:hover {
+    border: #FFAE00 2px solid;
+    border-radius: 10px;
+}
+
+.scrolling-blocks {
+    display: flex;
+    width: max-content;
+    transition: transform 0.5s ease;
+}
+
+.block {
+    flex: 0 0 200px;
+    height: 200px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-right: 10px;
+    border-radius: 10px;
+    min-width: 150px;
+    padding: 20px;;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    white-space: nowrap;
+}
