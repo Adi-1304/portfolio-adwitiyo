@@ -177,14 +177,17 @@ body {
     }
 }
 
-#home-section .image {
-    min-width: 60vh;
-    min-height: 50vh;
+#home-section .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: 7.5vh;
 }
 
-#about-section .image {
-    min-width: 50%;
-    min-height: 50vh;
+#home-section .image img{
+    height: 60vh;
+    width: 45vh;
 }
 
 #about-section {
@@ -218,6 +221,19 @@ body {
 
 #about-section .content .about {
     padding: 5vh 10vh;
+}
+
+#about-section .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 7.5vh;
+}
+
+#about-section .image img{
+    height: 55vh;
+    width: 40vh;
 }
 
 .footer {
